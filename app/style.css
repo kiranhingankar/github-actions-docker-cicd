@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #38bdf8;
+}
+
+.info {
+  margin-top: 30px;
+  line-height: 2;
+}
