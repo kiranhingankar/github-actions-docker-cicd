@@ -20,6 +20,13 @@ The application is automatically built whenever code is pushed to the repository
 
 ---
 
+# 🖼️ Application Preview
+
+
+![Application Screenshot](./screenshots/localhost-output.png)
+
+---
+
 # 📂 Project Structure
 
 ```bash
@@ -32,6 +39,9 @@ github-actions-docker-cicd/
 ├── app/
 │   ├── index.html
 │   └── style.css
+│
+├── screenshots/
+│   └── localhost-output.png
 │
 ├── Dockerfile
 └── README.md
