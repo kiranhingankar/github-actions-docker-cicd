@@ -19,8 +19,8 @@ jobs:
         id: vars
         run: echo "sha_short=$(echo ${GITHUB_SHA} | cut -c1-7)" >> $GITHUB_OUTPUT
 
-      # - name: Setup Docker Buildx
-      #   uses: actions/setup-buildx-action@v3
+      - name: Setup Docker Buildx
+        uses: actions/setup-buildx-action@v3
 
       - name: Login to Docker Hub
         if: github.ref == 'ref/heads/main'
