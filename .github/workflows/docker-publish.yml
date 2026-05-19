@@ -23,7 +23,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Login to Docker Hub
-        if: github.ref == 'ref/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -36,17 +36,17 @@ jobs:
           push: false
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/github-actions-docker-cicd:latest
-            ${{ secrets.DOCKER_TOKEN }}/github-actions-docker-cicd:sha-${{ steps.vars.outputs.sha_short }}
+            ${{ secrets.DOCKER_USERNAME }}/github-actions-docker-cicd:sha-${{ steps.vars.outputs.sha_short }}
 
       - name: Push Docker Image
-        if: github.ref == 'ref/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/github-actions-docker-cicd:latest
-            ${{ secrets.DOCKER_TOKEN }}/github-actions-docker-cicd:sha-${{ steps.vars.outputs.sha_short }}
+            ${{ secrets.DOCKER_USERNAME }}/github-actions-docker-cicd:sha-${{ steps.vars.outputs.sha_short }}
 
 
 
